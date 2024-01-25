@@ -29,7 +29,7 @@ public class SO2AverageDriver {
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(DoubleWritable.class);
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(Text.class); // Cambiado a Text para el Reducer
+        job.setOutputValueClass(DoubleWritable.class);
 
         // Rutas de entrada y salida
         FileInputFormat.addInputPath(job, new Path(args[0]));
